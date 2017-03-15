@@ -1,2 +1,2 @@
 # code-data-science
-Code (verb) Data Science.
+Tutorials, demos, and tests for using software to solve data science problems.
