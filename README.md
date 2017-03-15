@@ -1,2 +1,2 @@
 # code-data-science
-Tutorials, demos, and tests for using software to solve data science problems.
+Tutorials, demos, and tests on using software to solve data science problems.
