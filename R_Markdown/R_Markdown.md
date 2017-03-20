@@ -1,7 +1,6 @@
 -   [GitHub Documents](#github-documents)
 -   [Including Code](#including-code)
 -   [Including Plots](#including-plots)
-    -   [whatever](#whatever)
 
 GitHub Documents
 ----------------
@@ -30,14 +29,6 @@ Including Plots
 
 You can also embed plots, for example:
 
-![](R_Markdown_files/figure-markdown_github/plot%20pressure-1.png)
+![](R_Markdown_files/figure-markdown_github/pressure-1.png)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-
-### whatever
-
-``` r
-1+1
-```
-
-    ## [1] 2

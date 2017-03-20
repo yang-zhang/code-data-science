@@ -18,7 +18,7 @@ This is an R Markdown format used for publishing markdown documents to GitHub. W
 
 You can include R code in the document as follows:
 
-```{r summary of cars}
+```{r cars}
 summary(cars)
 ```
 
@@ -26,14 +26,10 @@ summary(cars)
 
 You can also embed plots, for example:
 
-```{r plot pressure, echo=FALSE}
+```{r pressure, echo=FALSE}
 plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-### whatever
-```{r whatkjis}
-1+1
-```
 
