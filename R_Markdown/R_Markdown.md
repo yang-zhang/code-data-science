@@ -1,12 +1,19 @@
--   [R Markdown](#r-markdown)
+R\_Markdown
+================
+
+-   [GitHub Documents](#github-documents)
+-   [Including Code](#including-code)
 -   [Including Plots](#including-plots)
 
-R Markdown
-----------
+GitHub Documents
+----------------
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Including Code
+--------------
+
+You can include R code in the document as follows:
 
 ``` r
 summary(cars)
