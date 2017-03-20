@@ -1,7 +1,5 @@
 ---
 title: "R_Markdown"
-author: "yang_zhang"
-date: "3/20/2017"
 output: 
   md_document:
     variant: markdown_github
