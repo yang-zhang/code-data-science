@@ -6,6 +6,13 @@
 from ds_utils.imports import *
 
 
+# ### `expanduser`
+
+# In[6]:
+
+os.path.expanduser(os.path.join('~', 'tmp'))
+
+
 # ### Plot image data
 
 # In[30]:
