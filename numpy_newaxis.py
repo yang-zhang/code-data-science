@@ -1,80 +1,101 @@
 
 # coding: utf-8
 
-# In[45]:
+# In[50]:
 
 import numpy as np
 
 
-# In[46]:
+# In[51]:
 
 x = 1
 
 
-# In[47]:
+# In[55]:
 
 y = np.array(x)
-y
+print(y)
+print(y.shape)
 
 
-# In[48]:
-
-y.shape
-
-
-# In[49]:
+# In[56]:
 
 y = np.array(x)[np.newaxis]
+print(y)
+print(y.shape)
 
 
-# In[19]:
+# In[58]:
 
-np.array(x)[np.newaxis, np.newaxis]
-
-
-# In[20]:
-
-np.array(x)[np.newaxis, np.newaxis, np.newaxis]
+y = np.array(x)[np.newaxis, np.newaxis]
+print(y)
+print(y.shape)
 
 
-# In[25]:
+# In[59]:
+
+y = np.array(x)[np.newaxis, np.newaxis, np.newaxis]
+print(y)
+print(y.shape)
+
+
+# In[61]:
 
 x = [1, 2, 3]
 
 
-# In[26]:
+# In[62]:
 
-np.array(x)
-
-
-# In[27]:
-
-np.array(x)[np.newaxis]
+y = np.array(x)
+print(y)
+print(y.shape)
 
 
-# In[31]:
+# In[63]:
 
-np.array(x)[np.newaxis, np.newaxis]
-
-
-# In[33]:
-
-np.array(x)[:, np.newaxis]
+y = np.array(x)[np.newaxis]
+print(y)
+print(y.shape)
 
 
-# In[35]:
+# In[71]:
+
+y = np.array(x)[np.newaxis, np.newaxis]
+print(y)
+print(y.shape)
+
+
+# In[74]:
+
+y = np.array(x)[np.newaxis, :, np.newaxis]
+print(y)
+print(y.shape)
+
+
+# In[65]:
+
+y = np.array(x)[:, np.newaxis]
+print(y)
+print(y.shape)
+
+
+# In[67]:
 
 x = [[1, 2, 3], [4, 5, 6]]
 
 
-# In[36]:
+# In[68]:
 
-np.array(x)
+y = np.array(x)
+print(y)
+print(y.shape)
 
 
-# In[38]:
+# In[69]:
 
-np.array(x)[np.newaxis]
+y = np.array(x)[np.newaxis]
+print(y)
+print(y.shape)
 
 
 # In[ ]:
