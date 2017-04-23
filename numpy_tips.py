@@ -1,24 +1,24 @@
 
 # coding: utf-8
 
-# In[2]:
+# In[3]:
 
-import numpy as  np
+import numpy as np
 
 
 # ### ndarray.size
 
-# In[200]:
+# In[9]:
 
 a = np.arange(12).reshape(3, 4)
 
-a.shape
-a.size
+print(a.shape)
+print(a.size)
 
 
 # ### `np.fromfunction()` 
 
-# In[171]:
+# In[10]:
 
 def f(i, j):
     return i*100 + j
@@ -28,17 +28,17 @@ np.fromfunction(f, (3, 4), dtype=int)
 
 # ###  One-dimensional `ndarray[start:end:step]` 
 
-# In[108]:
+# In[14]:
 
 type(np.arange(10))
 
 
-# In[102]:
+# In[15]:
 
 np.arange(100)[0:50:3]
 
 
-# In[103]:
+# In[16]:
 
 np.arange(100)[::3]
 
@@ -60,14 +60,14 @@ print range(100)[::-1]
 
 # ### Multidimensional ndarray indexing using "`...`"
 
-# In[12]:
+# In[18]:
 
 def f(i, j, k, m):
     return (i+1)*1000 + (j+1)*100 + (k+1)*10 + (m+1)
 
 b = np.fromfunction(f, (3, 4, 5, 6), dtype=int)
-b.shape
-b
+print(b.shape)
+print(b)
 
 
 # In[158]:
@@ -87,48 +87,53 @@ b[2,..., 3]
 
 # ### flatten
 
-# In[201]:
+# In[41]:
 
 b = np.arange(12).reshape(3, 4)
 
 
-# In[202]:
+# In[42]:
 
-b.reshape(b.size)
+b.reshape(b.size,)
 
 
-# In[203]:
+# In[24]:
 
 b.ravel()
 
 
-# In[206]:
+# In[27]:
 
 bf = b.flat
-b.flat
-for i in bf:
-    print i
+print(bf)
+[i for i in bf]
 
 
-# ### resize()
+# ### `resize()`
 
-# In[213]:
+# In[29]:
 
 a = np.arange(12).reshape(3, 4)
-a
+print(a)
 a.resize(4, 3)
-a
+print(a)
 
 
-# ### reshape(i,-1)
+# ### `reshape(i,-1)`
 
-# In[8]:
+# In[35]:
 
 a = np.arange(12).reshape(3, 4)
-a
-a.reshape(4, -1)
-a.reshape(-1,)
-a.squeeze()
+print(a)
+print(a.reshape(4, -1))
+print(a.reshape(-1,))
+
+
+# ### `squeeze()`
+
+# In[37]:
+
+np.array([[[1, 2]]]).squeeze()
 
 
 # ### newaxis
