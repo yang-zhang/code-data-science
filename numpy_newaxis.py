@@ -1,12 +1,12 @@
 
 # coding: utf-8
 
-# In[1]:
+# In[95]:
 
 import numpy as np
 
 
-# In[2]:
+# In[96]:
 
 def show_array(y):
     print('array:', y)
@@ -16,7 +16,7 @@ def show_array(y):
 
 # ### 0-D
 
-# In[3]:
+# In[97]:
 
 x = np.array(5)
 show_array(x)
@@ -24,13 +24,13 @@ show_array(x)
 
 # #### 0-D to 1-D
 
-# In[4]:
+# In[98]:
 
 y = np.array(x)[np.newaxis]
 show_array(y)
 
 
-# In[5]:
+# In[99]:
 
 y = np.expand_dims(x, axis=0)
 show_array(y)
@@ -38,30 +38,42 @@ show_array(y)
 
 # Any number >= 0 does the same.
 
-# In[6]:
+# In[100]:
 
 y = np.expand_dims(x, axis=123456)
 show_array(y)
 
 
+# In[101]:
+
+y = x.reshape(-1,)
+show_array(y)
+
+
 # #### 0-D to 2-D
 
-# In[7]:
+# In[102]:
 
 y = np.array(x)[np.newaxis, np.newaxis]
 show_array(y)
 
 
-# In[8]:
+# In[103]:
 
 y = np.expand_dims(x, axis=0)
 y = np.expand_dims(y, axis=0)
 show_array(y)
 
 
+# In[104]:
+
+y = x.reshape(-1, 1)
+show_array(y)
+
+
 # ### 1-D
 
-# In[9]:
+# In[105]:
 
 x = np.array([5, 6, 7])
 show_array(x)
@@ -71,33 +83,39 @@ show_array(x)
 
 # ##### Vector to row matrix
 
-# In[10]:
+# In[106]:
 
 y = np.array(x)[np.newaxis, :]
 show_array(y)
 
 
-# In[11]:
+# In[107]:
 
 y = np.array(x)[np.newaxis] # This is short hand of y = np.array(x)[np.newaxis, :]
 show_array(y)
 
 
-# In[12]:
+# In[108]:
 
 y = np.expand_dims(x, axis=0)
 show_array(y)
 
 
+# In[109]:
+
+y = x.reshape(1, -1)
+show_array(y)
+
+
 # ##### Vector to column matrix
 
-# In[13]:
+# In[110]:
 
 y = np.array(x)[:, np.newaxis]
 show_array(y)
 
 
-# In[14]:
+# In[111]:
 
 y = np.expand_dims(x, axis=1)
 show_array(y)
@@ -105,15 +123,21 @@ show_array(y)
 
 # Any number >= 1 does the same.
 
-# In[15]:
+# In[112]:
 
 y = np.expand_dims(x, axis=123456)
 show_array(y)
 
 
+# In[113]:
+
+y = x.reshape(-1, 1)
+show_array(y)
+
+
 # ### 2-D
 
-# In[16]:
+# In[114]:
 
 x = np.array([[1, 2, 3], [4, 5, 6]])
 show_array(x)
@@ -123,47 +147,71 @@ show_array(x)
 
 # ##### Case 1
 
-# In[17]:
+# In[115]:
 
 y = np.array(x)[np.newaxis, :, :]
 show_array(y)
 
 
-# In[18]:
+# In[116]:
 
 y = np.array(x)[np.newaxis, :]
 show_array(y)
 
 
-# In[19]:
+# In[117]:
 
 y = np.array(x)[np.newaxis]
 show_array(y)
 
 
-# In[20]:
+# In[118]:
 
 y = np.expand_dims(x, axis=0)
 show_array(y)
 
 
+# In[119]:
+
+y = x.reshape(-1, 2, 3)
+show_array(y)
+
+
+# In[126]:
+
+y = x.reshape(-1, *x.shape)
+show_array(y)
+
+
 # ##### Case 2
 
-# In[21]:
+# In[121]:
 
 y = np.array(x)[:, np.newaxis, :]
 show_array(y)
 
 
-# In[22]:
+# In[122]:
 
 y = np.array(x)[:, np.newaxis]
 show_array(y)
 
 
-# In[23]:
+# In[123]:
 
 y = np.expand_dims(x, axis=1)
+show_array(y)
+
+
+# In[124]:
+
+y = x.reshape(2, 1, 3)
+show_array(y)
+
+
+# In[127]:
+
+y = x.reshape(x.shape[0], -1, x.shape[1])
 show_array(y)
 
 
@@ -187,4 +235,15 @@ show_array(y)
 
 y = np.expand_dims(x, axis=123456)
 show_array(y)
+
+
+# In[128]:
+
+y = x.reshape(*x.shape, -1)
+show_array(y)
+
+
+# In[ ]:
+
+
 
